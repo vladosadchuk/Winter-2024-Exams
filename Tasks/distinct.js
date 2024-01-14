@@ -3,7 +3,7 @@
 
 const distinct = (data) => {
   const uniqueElements = new Set();
-  for(let i = 0; i < data.lenght; i++) {
+  for(let i = 0; i < data.length; i++) {
     const element = data[i];
     if (uniqueElements.has(element)) delete data[i];
     else uniqueElements.add(element);
