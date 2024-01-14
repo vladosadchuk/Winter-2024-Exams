@@ -3,11 +3,11 @@
 
 const merge_two_objects = (object_1, object_2) => {
   let object_3 = {};
-  for (const attribute_name in object_1) {
-    object_3[attribute_name] = object_1[attribute_name];
+  for (const [key, value] of Object.entries(object_1)) {
+    object_3[key] = value;
   }
-  for (const attribute_name in object_2) {
-    object_3[attribute_name] = object_2[attribute_name];
+  for (const [key, value] of Object.entries(object_2)) {
+    object_3[key] = value;
   }
   return object_3;
 };
