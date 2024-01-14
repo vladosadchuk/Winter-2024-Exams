@@ -6,7 +6,8 @@ const Month = (s) => {
                   'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
   
   for (let i = 0; i < Months.length; i++) {
-    if (s.toLowerCase().startsWith(Months[i])) return i + 1;
+    const lowerMonth = s.toLowerCase();
+    if (lowerMonth.indexOf(Months[i]) === 0) return i + 1;
   }
   return -1;
 };
