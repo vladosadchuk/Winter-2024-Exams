@@ -4,14 +4,10 @@
 const DISTINCT = (data) => {
   const A = new Set();
   for(let i = 0; i < data.lenght; i++) {
-    if (A.has(data[i])) {
-      delete data[i];
-    } else {
-      A.add(data[i]);
-    }
+    if (A.has(data[i])) delete data[i];
+    else A.add(data[i]);
   };
-  return data.filter
-  (x => typeof x === 'number');
+  return data.filter(x => typeof x === 'number');
 };
 
 module.exports = DISTINCT;
