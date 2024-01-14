@@ -1,8 +1,8 @@
 // Copy all values from dict except listed
 'use strict';
 
-EXCEPT = (incomingvaluesarray, ...no) => {
-  intermediate_variable = Object.keys(incomingvaluesarray, 'a', 'b', 'c');
+const EXCEPT = (incomingvaluesarray, ...no) => {
+  const intermediate_variable = Object.keys(incomingvaluesarray);
   intermediate_variable.forEach((Z) => {
     if (no.includes(Z)) {
       delete incomingvaluesarray[Z];
