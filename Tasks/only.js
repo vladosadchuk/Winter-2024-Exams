@@ -1,14 +1,12 @@
 // Copy only listed values from dict
 'use strict';
 
-const only = (W, ...only) => {
-  const X = Object.keys(W);
-  for(const key of X){
-    if(!only.includes(key)){
-      delete W[key];
-    }
-  }
-  return W;
+const getListedValues = (dict, ...allowedKeys) => {
+  const dictKeys = Object.keys(dict);
+  for(const key of dictKeys){
+    if(!allowedKeys.includes(key)) delete dict[key];
+  };
+  return dict;
 };
 
-module.exports = only;
+module.exports = getListedValues;
