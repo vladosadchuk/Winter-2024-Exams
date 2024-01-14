@@ -3,12 +3,11 @@
 
 const only = (W, ...only) => {
   const X = Object.keys(W);
-  X.forEach((Z) => {
-    if (only.includes(Z)) {
-    } else {
-      delete W[Z];
+  for(const key of X){
+    if(!only.includes(key)){
+      delete W[key];
     }
-  });
+  }
   return W;
 };
 
