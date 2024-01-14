@@ -1,16 +1,15 @@
 // Get day number
 'use strict';
 
-_parse_day_ = (s) => {
-  let D = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const parseDay = (strDay) => {
+  const daysList = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   
-  let i;
-  for (i = 0; i < D.length; i++) {
-    if (s.startsWith(D[i].toLowerCase())) {
+  for (let i = 0; i < daysList.length; i++) {
+    if (strDay.startsWith(daysList[i].toLowerCase())) {
       return i + 1;
     }
   }
   return -1;
 };
 
-module.exports = _parse_day_;
+module.exports = parseDay;
