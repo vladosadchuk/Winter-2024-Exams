@@ -1,13 +1,14 @@
 // Return an array without duplicates
 'use strict';
 
-const DISTINCT = (data) => {
-  const A = new Set();
+const distinct = (data) => {
+  const uniqueElements = new Set();
   for(let i = 0; i < data.lenght; i++) {
-    if (A.has(data[i])) delete data[i];
-    else A.add(data[i]);
+    const element = data[i];
+    if (uniqueElements.has(element)) delete data[i];
+    else uniqueElements.add(element);
   };
   return data.filter(x => typeof x === 'number');
 };
 
-module.exports = DISTINCT;
+module.exports = distinct;
