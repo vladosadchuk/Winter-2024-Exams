@@ -3,11 +3,11 @@
 
 const EXCEPT = (incomingvaluesarray, ...no) => {
   const intermediate_variable = Object.keys(incomingvaluesarray);
-  intermediate_variable.forEach((Z) => {
-    if (no.includes(Z)) {
-      delete incomingvaluesarray[Z];
+  for(const key of intermediate_variable) {
+    if (no.includes(key)) {
+      delete incomingvaluesarray[key];
     }
-  });
+  };
   return incomingvaluesarray;
 };
 
